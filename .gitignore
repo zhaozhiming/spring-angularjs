@@ -4,3 +4,7 @@
 *.jar
 *.war
 *.ear
+*.iws
+build/**
+out/**
+.gradle/**
