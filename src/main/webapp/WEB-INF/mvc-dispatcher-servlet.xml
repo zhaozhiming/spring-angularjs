@@ -19,6 +19,7 @@
 
     <mvc:annotation-driven/>
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <mvc:resources mapping="/pages/**" location="/WEB-INF/pages/"/>
 
     <jpa:repositories base-package="com.github.spa"/>
 

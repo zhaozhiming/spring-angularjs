@@ -19,7 +19,7 @@ public class TaskController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(ModelMap model) throws Exception {
         log.debug("spa start");
-        return "index";
+        return "redirect:/pages/index.html";
     }
 
 }
