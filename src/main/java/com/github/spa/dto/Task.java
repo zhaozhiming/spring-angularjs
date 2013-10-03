@@ -6,55 +6,40 @@ import javax.persistence.*;
 public class Task {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Basic
-    private String uid;
+    private String name;
 
     @Basic
-    private String status;
+    private String owner;
 
     @Basic
-    private String url;
+    private String createdDate;
 
-    @Basic
-    private Long createdAt;
-
-    public Task(String uid, String status, Long createdAt) {
-        this.uid = uid;
-        this.status = status;
-        this.createdAt = createdAt;
+    public Task(String name, String owner, String createdDate) {
+        this.name = name;
+        this.owner = owner;
+        this.createdDate = createdDate;
     }
 
     public Task() {
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public String getUrl() {
-        return url;
+    public String getOwner() {
+        return owner;
     }
 
     public Long getId() {
         return id;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public String getCreatedDate() {
+        return createdDate;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public Long getCreatedAt() {
-        return createdAt;
-    }
-
-    public String getUid() {
-        return uid;
+    public String getName() {
+        return name;
     }
 }

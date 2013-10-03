@@ -1,13 +1,16 @@
 package com.github.spa;
 
+import com.github.spa.dto.Task;
 import com.github.spa.repo.TaskRepository;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class TaskController {
@@ -21,5 +24,19 @@ public class TaskController {
         log.debug("spa start");
         return "redirect:/pages/index.html";
     }
+
+    @ModelAttribute
+    public Task createTask(@RequestParam String taskName, String taskOwner, String createdDate) {
+        return new Task(taskName, taskOwner, createdDate);
+    }
+
+    @RequestMapping(value = "/task/add", method = RequestMethod.POST)
+    public String addTask(@ModelAttribute("task") Task task) throws Exception {
+        log.debug("task is null?" + (task == null));
+        taskRepository.save(task);
+        return "redirect:/pages/index.html";
+    }
+
+
 
 }
