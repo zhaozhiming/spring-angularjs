@@ -25,7 +25,7 @@ public class TaskController {
     private TaskRepository taskRepository;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index(ModelMap model) throws Exception {
+    public String index() throws Exception {
         log.debug("spa start");
         return "redirect:/pages/index.html";
     }
