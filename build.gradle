@@ -37,16 +37,12 @@ dependencies {
             "org.springframework:spring-webmvc:3.2.0.RELEASE",
             "org.springframework:spring-test:3.2.0.RELEASE",
             "jstl:jstl:1.2",
-            "org.springframework.data:spring-data-jpa:1.2.0.RELEASE",
             "org.json:json:20080701",
             "joda-time:joda-time:2.2",
             "com.google.guava:guava:r09",
             "commons-httpclient:commons-httpclient:3.1",
-            "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final",
-            "org.hibernate:hibernate-entitymanager:3.6.10.Final",
             "log4j:log4j:1.2.17",
             "org.slf4j:slf4j-log4j12:1.7.5",
-            'hsqldb:hsqldb:1.8.0.10'
     )
 
     testCompile(
