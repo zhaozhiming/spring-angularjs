@@ -1,16 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="spa">
 <head>
     <title>spring4 with angular js</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" href="http://cdn.staticfile.org/semantic-ui/0.12.0/css/semantic.css">
 </head>
 <body>
-    welcome
+
+<div class="ui transparent inverted main menu">
+    <div class="container">
+        <div class="title item">
+            <b>Spring4 with angular js</b>
+        </div>
+    </div>
+</div>
+
+<div class="ui large vertical inverted labeled icon sidebar menu" id="sidebar">
+    <div class="item">
+        <a href="#/home">
+            <b>菜单</b>
+        </a>
+        <div class="menu">
+            <a class="item" href="#/uploadFile">上传文件</a>
+            <a class="item" href="#/">下载文件</a>
+        </div>
+    </div>
+</div>
+
+<div class="ui grid">
+    <div class="one wide column"></div>
+
+    <div class="fifteen wide column">
+        <div ng-view/>
+    </div>
+</div>
+
+
+<div class="ui divider"></div>
+<div class="ui inverted segment center aligned">
+    <div class="ui inverted horizontal relaxed divided tiny list">
+        <div class="item">Super-powered by zhaozhiming ©2013-2015</div>
+    </div>
+</div>
 
 <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.1.0/jquery.js"></script>
 <script type="text/javascript" src="http://cdn.staticfile.org/angular.js/1.2.0rc3/angular.js"></script>
 <script type="text/javascript" src="http://cdn.staticfile.org/angular.js/1.2.0rc3/angular-route.js"></script>
 <script type="text/javascript" src="http://cdn.staticfile.org/semantic-ui/0.12.0/javascript/semantic.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 
 </body>
 </html>
